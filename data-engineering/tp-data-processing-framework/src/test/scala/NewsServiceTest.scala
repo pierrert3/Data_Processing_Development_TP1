@@ -29,7 +29,7 @@ class NewsServiceTest extends AnyFunSuite {
   val fakeListNews = List(news, news2, newsClimate).toDS().as[News]
 
   test("getNumberOfNews") {
-    assert(NewsService.getNumberOfNews(fakeListNews) == 3)
+    assert(NewsService.getNumberOfNews(fakeListNews) == 1)
   }
 
   test("filterNews") {

@@ -35,7 +35,7 @@ object NewsService {
         news.editorDeputy,
         news.url,
         news.urlTvNews,
-        news.containsWordGlobalWarming, // @TODO: we need to apply a function here from ClimateService
+        ClimateService.isClimateRelated(news.title + news.description), // @TODO: we need to apply a function here from ClimateService
         news.media
       )
 

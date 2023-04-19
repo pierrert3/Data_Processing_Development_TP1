@@ -26,13 +26,16 @@ object Main {
 
     // print the dataset schema - tips : https://spark.apache.org/docs/latest/sql-getting-started.html#untyped-dataset-operations-aka-dataframe-operations
     //@TODO newsDatasets.???
+    newsDatasets.printSchema()
 
     // Show the first 10 elements - tips : https://spark.apache.org/docs/latest/sql-getting-started.html#creating-dataframes
     //@TODO newsDatasets.???
+    newsDatasets.show(10)
 
     // Enrich the dataset by apply the ClimateService.isClimateRelated function to the title and the description of a news
     // a assign this value to the "containsWordGlobalWarming" attribute
     val enrichedDataset = NewsService.enrichNewsWithClimateMetadata(newsDatasets)
+    enrichedDataset.show(10)
 
     // From now, we'll use only the Dataset API as it's more convenient
     val filteredNewsAboutClimate = NewsService.filterNews(enrichedDataset)
