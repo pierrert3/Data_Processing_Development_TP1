@@ -70,9 +70,15 @@ object Main {
     // Save it as a columnar format with Parquet with a partition by date and media
     // Learn about Parquet : https://spark.apache.org/docs/3.2.1/sql-data-sources-parquet.html
     // Learn about partition : https://spark.apache.org/docs/3.2.1/sql-data-sources-load-save-functions.html#bucketing-sorting-and-partitioning
+<<<<<<< HEAD
     /** enregistrement des données dans un fichier parquet */
     /** partition des données: division des données en groupes plus petits basés sur la data et le média
      * -> creation de répertoires basés sur les valeurs des colonnes "date" et "média". Cela permet de regrouper les données liées à
+=======
+    /** enregistrement des données dans in fichier parquet */
+    /** partition des données: division des données en groupes plus petits basés sur la data et le média
+     * -> creatio de répertoires basés sur les valeurs des colonnes "date" et "média". Cela permet de regrouper les données liées à
+>>>>>>> e86cce489d67c62f37cb7ff743aaf67328f9211b
      * une date spécifique ou à un média spécifique dans des répertoires séparés, ce qui peut améliorer les performances
      * de requête et de traitement des données. */
     StronglyTypedSqlQuery.write
@@ -83,4 +89,3 @@ object Main {
     System.exit(0)
   }
 }
-
