@@ -11,6 +11,7 @@ object SparkService {
       .builder()
       .appName("EPF - TelevisionNewsAnalyser")
       .master("local[*]") // https://spark.apache.org/docs/3.2.1/submitting-applications.html#master-urls
+      // Run Spark locally with as many worker threads as logical cores on your machine.
       .getOrCreate()
   }
 }
